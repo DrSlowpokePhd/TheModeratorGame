@@ -1,0 +1,8 @@
+{
+    "name": "The-Moderator",
+    "description": "an insidiously boring political thriller",
+    "version": "0.1.0",
+    "scripts": {
+        "test": "jasmine-browser-runner runSpecs"
+    }
+}

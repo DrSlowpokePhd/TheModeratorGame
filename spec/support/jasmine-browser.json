@@ -1,0 +1,21 @@
+{
+  "srcDir": "tests",
+  "srcFiles": [
+    "**/*.js"
+  ],
+  "specDir": "spec",
+  "specFiles": [
+    "**/*[sS]pec.js"
+  ],
+  "helpers": [
+    "src/TextGenerator.js"
+  ],
+  "env": {
+    "stopSpecOnExpectationFailure": false,
+    "stopOnSpecFailure": false,
+    "random": true
+  },
+  "browser": {
+    "name": "firefox"
+  }
+}
