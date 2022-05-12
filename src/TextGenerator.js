@@ -73,14 +73,57 @@ class TextGen {
             { name : "amoderate", value : this.results.anti.moderate},
             { name : "aradical", value  : this.results.anti.radical}
         ];
+        
         this.sortedCategories.sort((a, b) => {
-            return a.value - b.value;
+            return b.value - a.value;
         });
-
+        
+        this.getCategoryLength = (beans) => {
+            let sideVar1, intensityVar1;
+            switch (beans) {
+                case "pmild":
+                case "pmoderate":
+                case "pradical":
+                    sideVar1 = "pro"
+                    // this.currentPost.side = "pro";
+                    break;
+                                            
+                case "amild":
+                case "amoderate":
+                case "aradical":
+                    sideVar1 = "anti";
+                    // this.currentPost.side = "anti";
+                    break;
+                default:
+                    break;
+            }
+            console.log(beans);
+            switch (beans) {
+                case "pmild":
+                case "amild":
+                    intensityVar1 = "mild";
+                    // this.currentPost.intensity = "mild";
+                    break;
+                case "pmoderate":
+                case "amoderate":
+                    intensityVar1 = "moderate";
+                    // this.currentPost.intensity = "moderate";
+                    break;
+                case "pradical":
+                case "aradical":
+                    intensityVar1 = "radical";
+                    // this.currentPost.intensity = "radical";
+                    break;
+                default:
+                    break;
+            }
+            return this.file["posts"][sideVar1][intensityVar1].length;
+        }
         console.log(this.sortedCategories);
         this.chosenCategory;
         for(let i = 0; i < this.sortedCategories.length; i++){
-            if (this.sortedCategories[i].value > 0) {
+            if (this.sortedCategories[i].value > 0 && 
+                this.getCategoryLength(this.sortedCategories[i].name) > 0) {
                 this.chosenCategory = this.sortedCategories[i].name;
                 break;
             }
@@ -146,4 +189,10 @@ class TextGen {
         }
 
     }
+    
+    
 }
+
+// tests
+
+

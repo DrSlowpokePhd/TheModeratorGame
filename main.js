@@ -14,6 +14,6 @@ let config = {
 
 let game = new Phaser.Game(config);
 let keyLeft, keyRight, escKey;
-let debugMode = true;
+let debugMode = false;
 let tally;
 

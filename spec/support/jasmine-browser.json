@@ -1,5 +1,5 @@
 {
-  "srcDir": "tests",
+  "srcDir": "src/TextGenerator.js",
   "srcFiles": [
     "**/*.js"
   ],
