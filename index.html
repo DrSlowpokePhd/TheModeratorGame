@@ -1,20 +1,34 @@
-<!DOCTYPE html>
-<html>
-    <header>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>The Moderator</title>
-    </header>
-    <script src="src/ProbabilityTable.js"></script>
-    <script src="src/TextGenerator.js"></script>
-    <script src="lib/phaser.js"></script>
-    <script src="lib/GameUtils.js"></script>
-    <script src="src/Scenes/Game.js"></script> 
-    <script src="src/Scenes/Menu.js"></script>
-    <script src="src/Scenes/GameIntro.js"></script>
-    <script src="src/Scenes/Endings.js"></script>
-    <script src="main.js"></script>
-    
+    </head>
+    <style type="text/css" media="all">
+        .center {
+            width: 100%;
+            border: solid crimson;
+            border-width: 10px;
+            /* border-color: crimson; */ 
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .item {
+            width: 10%;
+        }
+
+        a.item {
+            font-size: 24px;
+        }
+        
+    </style>
     <body>
-        <div></div>
+        <div class="center">
+            <a class="item" href="game.html">Run Game</a>
+            <a class="item" href="compromise.html">Testing Compromise</a>
+        </div>
     </body>
 </html>
-

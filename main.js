@@ -9,11 +9,11 @@ let config = {
     width: 960,
     height: 720,
     type: Phaser.CANVAS,
-    scene: [Menu, GameIntro, Game, Endings]
+    scene: [Menu, GameIntro, Game, Endings, NewUI]
 };
 
 let game = new Phaser.Game(config);
 let keyLeft, keyRight, escKey;
-let debugMode = false;
+let debugMode = true;
 let tally;
 

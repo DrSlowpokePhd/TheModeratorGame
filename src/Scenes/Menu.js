@@ -16,7 +16,7 @@ class Menu extends Phaser.Scene {
         if (Phaser.Input.Keyboard.JustDown(keyRight)) {
             this.scene.start('game-intro');
         } else if (debugMode) {
-            this.scene.start('game');
+            this.scene.start('ui-test');
         }
     }
 }
